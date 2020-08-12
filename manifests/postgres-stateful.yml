@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres10
+spec:
+  serviceName: postgres10
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres10
+  template:
+    metadata:
+      labels:
+        app: postgres10
+    spec:
+      containers:
+      - name: postgres10
+        image: postgres:10.12-alpine
+        envFrom:
+          - configMapRef:
+              name: postgres10-config
+        ports:
+        - containerPort: 5432
+          name: postgresdb10
+        volumeMounts:
+        - name: postgresdb10
+          mountPath: /var/lib/postgresql/data
+  volumeClaimTemplates:
+  - metadata:
+      name: postgresdb10
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 5Gi

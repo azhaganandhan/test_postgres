@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres10-config
+  labels:
+    app: postgres10
+data:
+  POSTGRES_DB: demopostgresdb
+  POSTGRES_USER: demopostgresadmin
+  POSTGRES_PASSWORD: demopostgrespwd
