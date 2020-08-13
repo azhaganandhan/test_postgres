@@ -21,5 +21,3 @@ jobs:
           manifests/postgres-config.yml
           manifests/postgres-service.yml
           manifests/postgres-stateful.yml
-        images: |
-          docker.talam.io/postgres:${{ github.sha }}
