@@ -22,4 +22,4 @@ jobs:
           manifests/postgres-service.yml
           manifests/postgres-stateful.yml
         images: |
-          docker.stage.auroville.org/postgres:${{ github.sha }}
+          docker.talam.io/postgres:${{ github.sha }}
