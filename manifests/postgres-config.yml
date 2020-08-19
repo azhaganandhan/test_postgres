@@ -5,6 +5,6 @@ metadata:
   labels:
     app: postgres10
 data:
-  POSTGRES_DB : demopostgresdb
-  POSTGRES_USER : demopostgresadmin
-  POSTGRES_PASSWORD : demopostgrespwd
+  POSTGRES_DB: demopostgresdb
+  POSTGRES_USER: demopostgresadmin
+  POSTGRES_PASSWORD: demopostgrespwd
