@@ -5,6 +5,6 @@ metadata:
   labels:
     app: postgres10
 data:
-  POSTGRES_DB : ${{ secrets.K8S_36_DB }}
-  POSTGRES_USER : ${{ secrets.K8S_36_USER }}
-  POSTGRES_PASSWORD : ${{ secrets.K8S_36_PASSWORD }}
+  POSTGRES_DB : demopostgresdb
+  POSTGRES_USER : demopostgresadmin
+  POSTGRES_PASSWORD : demopostgrespwd
